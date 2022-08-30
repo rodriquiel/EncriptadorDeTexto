@@ -1,0 +1,151 @@
+@font-face {
+    /* Define fuente a utilizar*/
+    font-family: "Rubik";
+    src: url(Rubik/static/Rubik-Regular.ttf);
+}
+
+body{
+    /*Color del fondo y fuente*/
+    background-color: lightgreen;
+    background: -webkit-linear-gradient(lightgreen, rgb(122, 241, 206));
+    background: -moz-linear-gradient(lightgreen, rgb(122, 241, 206));
+    background: -o-linear-gradient(lightgreen, rgb(122, 241, 206));
+    background: linear-gradient(lightgreen, rgb(122, 241, 206));
+    font-family: "Rubik";
+}
+
+.principal{
+    /*Define tamaño y margenes*/
+    width: 1040px;
+    margin: auto;
+    transition: 1s all;
+}
+
+.logo{
+    margin: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 60px;
+    margin: 5px;
+    color: #0A3871;
+    transition: 1s all;
+}
+
+.titulo:hover,.logo:hover{
+    transform: scale(1.05);
+}
+
+.cajaMensaje{
+    /*Tamaños y posicion cajas de texto*/
+    display: inline-flex;
+    justify-content: center;
+    width: 1020px;
+    margin: 10px;
+    margin-top: 80px;
+}
+
+.mensaje,.lectura{
+    /*Estilo y fuente cajas de texto*/
+    margin: 10px;
+    padding: 12px;
+    width: 420px;
+    height: 380px;
+    font-size: 16pt;
+    color: black;
+    border-radius: 32px;
+    background-color: #FFFFFF;
+    border: none;
+    resize: none;
+    font-family: "Rubik";
+    font-size: 16pt;
+    color: black;
+}
+
+.mensaje:focus,.lectura:focus{
+    outline: none;
+}
+
+
+.lectura{
+    /*Fondo caja de texto de mensaje encriptado/desencriptado*/
+    background-image: url("Muñeco.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aviso{
+    margin-left: 80px;
+    font-size: 18px;
+    color: #0A3871;
+}
+
+#signoExclamacion {
+    margin-right: 5px;
+}
+
+.cajaBotones{
+    /*Posicion botones*/
+    display: inline-flex;
+    justify-content: left;
+    width: 1020px;
+    margin: 10px;
+}
+
+.encriptar,.desencriptar,.copiar{
+    /*Tamaño y caracteristicas botones*/
+    width: 150px;
+    height: 40px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-family: "Rubik";
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.encriptar{
+    
+    position: absolute;
+    margin-left: 80px;
+    background-color: #0a3871;
+    color: #FFFFFF;
+    border: none;
+}
+
+.encriptar:hover,.desencriptar:hover,.copiar:hover{
+    transform: scale(1.1);
+}
+
+.desencriptar{
+    position: absolute;
+    margin-left: 315px;
+    background-color: lightblue;
+    color: #0a3871;
+    border: 1px solid #0A3871;
+}
+
+.copiar{
+    margin-left: 780px;
+    background-color: lightblue;
+    color: #0a3871;
+    border: 1px solid #0A3871;
+}
+
+.piePagina {
+    margin-top: 90px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Rubik";
+    font-size: 13px;
+    color: #0A3871 ;
+}
+
+.redireccion {
+    text-decoration: none;
+    color: #0A3871;
+}
+
+.redireccion:hover {
+    text-decoration: underline;
+}
