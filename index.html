@@ -13,27 +13,35 @@
     <body>
         <div class="principal">
             <header class="encabezado">
-            
-                <h1><a href="https://www.aluracursos.com/"><img src="Logo.png" alt="Logo Alura" class="logo"></a></h1>
-                <h1 class="titulo"> Encriptador de Texto </h1>
-
+                <div class="container">
+                    <h1><a href="https://www.aluracursos.com/"><img src="Logo.png" alt="Logo Alura" class="logo"></a></h1>
+                    <h1 class="titulo"> Encriptador de Texto </h1>
+                </div>
             </header>
 
             <main>
                 <section class="cuadrosTexto">
                     <div class="cajaMensaje">
-                        <textarea name="mensaje" class="mensaje" placeholder="Ingrese la palabra o texto a encriptar o desencriptar"></textarea>
-                        <textarea name="lectura" class="lectura" readonly></textarea>
-                    </div>
+                        <div class="container">
+                            <textarea name="mensaje" class="mensaje" placeholder="Ingrese la palabra o texto a encriptar o desencriptar"></textarea>
+                            <textarea name="lectura" class="lectura" readonly></textarea>
+                        </div>        
+                   </div>
                 </section>
 
                 <p class="aviso"><img src="Vector.png" alt="signo exclamacion" id="signoExclamacion">Letras sin acento</p>
 
                 <section class="botones">
                     <div class="cajaBotones">
-                        <input type="button" value="Encriptar" class="encriptar" id="encriptar" onclick="EncriptarMensaje()">
-                        <input type="button" value="Desencriptar" class="desencriptar" id="desencriptar" onclick="DesencriptarMensaje()">
-                        <input type="button" class="copiar" value="Copiar texto" onclick="Copiar()">
+                        <div class="container">
+                            <div class="encriptarDesencriptar">
+                                <input type="button" value="Encriptar" class="encriptar" id="encriptar" onclick="EncriptarMensaje()">
+                                <input type="button" value="Desencriptar" class="desencriptar" id="desencriptar" onclick="DesencriptarMensaje()">
+                            </div>
+                            <div class="btnCopiar">    
+                                <input type="button" class="copiar" value="Copiar texto" onclick="Copiar()">
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -41,9 +49,11 @@
     </body>
 
     <footer class="piePagina">
-        <p>Realizado por <a class="redireccion" href="https://www.linkedin.com/in/ezequiel-rodriguez-8b0a4923b/">Ezequiel Facundo Rodriguez</a></p>
-        <p>Oracle One-Next Education</p>
-        <p>Alura LATAM</p>
+        <div class="container">
+            <p>Realizado por <a class="redireccion" href="https://www.linkedin.com/in/ezequiel-rodriguez-8b0a4923b/">Ezequiel Facundo Rodriguez</a></p>
+            <p>Oracle One-Next Education</p>
+            <p>Alura LATAM</p>
+        </div>
     </footer>
 </html>
 

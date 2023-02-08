@@ -21,37 +21,39 @@ body{
     transition: 1s all;
 }
 
-.logo{
+.encabezado .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado .container .logo{
     margin: 10px;
 }
 
-.titulo{
+.encabezado .container .titulo{
     text-align: center;
     font-size: 60px;
     margin: 5px;
     color: #0A3871;
-    transition: 1s all;
 }
 
-.titulo:hover,.logo:hover{
-    transform: scale(1.05);
-}
-
-.cajaMensaje{
+.cuadrosTexto .cajaMensaje{
     /*Tamaños y posicion cajas de texto*/
-    display: inline-flex;
-    justify-content: center;
-    width: 1020px;
-    margin: 10px;
-    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.mensaje,.lectura{
-    /*Estilo y fuente cajas de texto*/
+.cuadrosTexto .cajaMensaje .container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cuadrosTexto .cajaMensaje .mensaje,.cuadrosTexto .cajaMensaje .lectura{
+    width: 100%;
+    height: 400px;
     margin: 10px;
     padding: 12px;
-    width: 420px;
-    height: 380px;
     font-size: 16pt;
     color: black;
     border-radius: 32px;
@@ -67,8 +69,7 @@ body{
     outline: none;
 }
 
-
-.lectura{
+.cuadrosTexto .cajaMensaje .lectura{
     /*Fondo caja de texto de mensaje encriptado/desencriptado*/
     background-image: url("Muñeco.png");
     background-position: center;
@@ -85,16 +86,31 @@ body{
     margin-right: 5px;
 }
 
-.cajaBotones{
-    /*Posicion botones*/
-    display: inline-flex;
-    justify-content: left;
-    width: 1020px;
-    margin: 10px;
+.botones .cajaBotones{
+    display: flex;
+    justify-content: space-between;
 }
 
-.encriptar,.desencriptar,.copiar{
-    /*Tamaño y caracteristicas botones*/
+.botones .cajaBotones .container{
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+}
+
+
+.botones .cajaBotones .encriptarDesencriptar{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.botones .cajaBotones .btnCopiar{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.encriptar, .desencriptar,.copiar{
     width: 150px;
     height: 40px;
     border-radius: 24px;
@@ -104,10 +120,13 @@ body{
     transition: 1s all;
 }
 
+.desencriptar, .copiar{
+    background-color: lightblue;
+    color: #0a3871;
+    border: 1px solid #0A3871;
+}
+
 .encriptar{
-    
-    position: absolute;
-    margin-left: 80px;
     background-color: #0a3871;
     color: #FFFFFF;
     border: none;
@@ -117,28 +136,16 @@ body{
     transform: scale(1.1);
 }
 
-.desencriptar{
-    position: absolute;
-    margin-left: 315px;
-    background-color: lightblue;
-    color: #0a3871;
-    border: 1px solid #0A3871;
+.piePagina .container{
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center
 }
 
-.copiar{
-    margin-left: 780px;
-    background-color: lightblue;
-    color: #0a3871;
-    border: 1px solid #0A3871;
-}
-
-.piePagina {
-    margin-top: 90px;
-    padding: 10px;
-    text-align: center;
-    font-family: "Rubik";
-    font-size: 13px;
-    color: #0A3871 ;
+.piePagina .container p{
+    display: flex;
+    justify-content: center;
 }
 
 .redireccion {
@@ -148,4 +155,65 @@ body{
 
 .redireccion:hover {
     text-decoration: underline;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width:768px){
+
+    .principal{
+        /*Define tamaño y margenes*/
+        width: auto;
+        margin: auto;
+    }
+
+    .encabezado .container .logo{
+        margin: 10px;
+    }
+    
+    .encabezado .container .titulo{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .cuadrosTexto .cajaMensaje .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadrosTexto .cajaMensaje .mensaje,.cuadrosTexto .cajaMensaje .lectura{
+        width: 70%;
+        height: 300px;
+    }
+
+    .cuadrosTexto .cajaMensaje .lectura{
+        background-size: contain;
+    }
+
+    .botones .cajaBotones .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botones .cajaBotones .encriptarDesencriptar, .botones .cajaBotones .botonCopiar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptar, .desencriptar,.copiar{
+        margin: 10px;
+    }
+
+    .piePagina .container .mensajeRedireccion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
 }
